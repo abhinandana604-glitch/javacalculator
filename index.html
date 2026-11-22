@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="calculator" aria-label="Calculator">
+      <header>
+        <div>
+          <p class="eyebrow">SIMPLE TOOL</p>
+          <h1>Calculator</h1>
+        </div>
+        <button class="clear-history" id="clearHistory" type="button">Clear history</button>
+      </header>
+
+      <div class="display">
+        <div class="expression" id="expression" aria-live="polite"></div>
+        <output id="display" aria-live="polite">0</output>
+      </div>
+
+      <div class="keys">
+        <button class="utility" data-action="clear">AC</button>
+        <button class="utility" data-action="delete">DEL</button>
+        <button class="operator" data-value="%">%</button>
+        <button class="operator" data-value="/">÷</button>
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button class="operator" data-value="*">×</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button class="operator" data-value="-">−</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button class="operator" data-value="+">+</button>
+
+        <button class="utility" data-action="sign">+/−</button>
+        <button data-value="0">0</button>
+        <button data-action="decimal">.</button>
+        <button class="equals" data-action="calculate">=</button>
+      </div>
+      <p class="hint">Tip: You can also use your keyboard.</p>
+    </section>
+
+    <aside class="history">
+      <h2>Recent calculations</h2>
+      <p class="history-subtitle">Your history is saved in this browser.</p>
+      <ul id="historyList"><li class="empty">No calculations yet.</li></ul>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
